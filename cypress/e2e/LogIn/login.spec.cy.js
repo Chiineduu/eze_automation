@@ -8,7 +8,7 @@ describe('S8: Log In Suite',function()
     cy.visit('/')
   })
 
-  it.only('TC_Login_01: Verify Log In with valid credentials.',function(){
+  it('TC_Login_01: Verify Log In with valid credentials.',function(){
     logInPage.logInWithUser();
   });
   it('TC_Login_02: To verify Log In with invalid credentials.',function(){
