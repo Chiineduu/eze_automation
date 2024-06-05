@@ -1,64 +1,73 @@
 class LogInObjects
 {
-    // Log In button selector
-    getLoginBtnSelector()
+    
+    // Log In Selector 
+    LogInSelector()
     {
-        return ('._login');
+      return '.nav-bar_log_in__bmM83';
     }
-    // Buttons selector
-    buttonSelector()
-    {
-        return 'button';
-    }
+
     // Email Field selector
-    getEmailFieldSelector()
+    EmailFieldSelector()
     {
-        return ':nth-child(1) > [data-testid="inputs"]';
+        return ':nth-child(3) > .input-field_input_wrap__xz574 > #ezeInput';
     }
     //Password field selector
-    getPasswordFieldSelector()
+    PasswordFieldSelector()
     {
-        return '.input-group > [data-testid="inputs"]';
+        return ':nth-child(4) > .input-field_input_wrap__xz574 > #ezeInput';
     }
-    //Submit button selector
-    getSubmitBtnSelector()
+    //Sign in button selector
+    SignBtnSelector()
     {
-        return ('form > [data-testid="button"]');
+        return '.log-in_wrap__VC8XS > .button_wrap__q_XU_ > .button_primary__gqhgv';
     }
     //User profile icon selector
-    getProfileAvtarSelector()
+    ProfileAvatarSelector()
     {
-      return '.MuiAvatar-root';
+      return '.sub-components_initials__VDGDe';
     }
     //Error messages selector
-    getErrorMessage()
+    ErrorMessage()
     {
-      return '.toast';
+      return '.log-in_error__PzeC3 > span';
     }
     // Heading on Login Popup
     popupHeadingSelector()
     {
-      return '.styles__Header-sc-5noga9-0 > p';
+      return '.log-in_wrap__VC8XS > span';
     }
     // Register link on login popup
-    registerLinkSelector()
+    SignUpSelector()
     {
-        return 'p > a';
+        return '.log-in_sign_up__TeztM > p > a';
     }
     // Create Account heading Selector
     createAccountheadingSelector()
     {
-        return '.styles__Header-sc-5noga9-0 > h2';
+        return 'h1';
     }
     //Forgot Password link selector
     forgotPasswordLink()
     {
-        return '.styles__ActionWrapper-sc-5noga9-2 > a';
+        return '.log-in_sign_up__TeztM > :nth-child(2)';
     }
     //Checkbox selector
-    rememberMeCheckbox()
+    RememberCheckbox()
     {
-        return '.styles__CheckBox-sc-5noga9-3 > input';
+        return '.checkbox_radio_element__xHgSZ';
+    }
+
+    // Close Modal Selector
+    closebtnselector()
+    {
+        return '.log-in_left_box__pxuxG > :nth-child(1)';
+    }
+
+    // Forgot Password pop up 
+    forgotPasswordPopup()
+    {
+        return '.forgot-password_wrap__VcRT0 > span';
     }
 }
 export default LogInObjects

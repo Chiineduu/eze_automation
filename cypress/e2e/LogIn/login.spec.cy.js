@@ -2,20 +2,20 @@
 import LogInMethods from '../../support/Login/logInMethods';
 const logInPage = new LogInMethods()
 
-describe('S8: Log In Suite',function()
+describe('Log In Suite',function()
 {
   this.beforeEach(function () {
     cy.visit('/')
   })
 
-  it('TC_Login_01: Verify Log In with valid credentials.',function(){
+  it.only('TC_Login_01: Verify Log In with valid credentials.',function(){
     logInPage.logInWithUser();
   });
   it('TC_Login_02: To verify Log In with invalid credentials.',function(){
     logInPage.logInWithInvalidCredentials();
   });
   it('TC_Login_03: To verify "Register" link is functional on "Login" popup.',function(){
-    logInPage.verifyRegisterLinkOnLogin();
+    logInPage.verifySignUpLinkOnLogin();
   });
   it('TC_Login_04: To verify "Forgot Password" link is functional on "Login" popup.',function(){
     logInPage.verifyForgotPasswordLink();

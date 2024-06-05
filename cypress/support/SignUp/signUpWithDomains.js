@@ -6,105 +6,82 @@ const signUpObject = new SignUpObjects();
 
 class SignUpDomainMethods {
     signUpWithGmail() {
-        cy.get(signUpObject.selectCountry()).click();
-        cy.get(signUpObject.selectCountryName()).click();
+        
         cy.get(signUpObject.button()).contains('Create an Account').click();
-        cy.get(signUpObject.getFirstNameSelector()).type('Drob');
-        cy.get(signUpObject.getLastNameSelector()).type('Ypsm');
+        cy.get(signUpObject.FirstNameSelector()).eq(0).type('cypress',{force:true}); 
+        cy.get(signUpObject.getLastNameSelector()).eq(1).type('Test',{force:true});
         cy.get(signUpObject.getEmailSelector()).type(chance.email({ domain: "gmail.com" }));
-        cy.get(signUpObject.companyNameSelector()).type(chance.string({ length: 5 }));
-        cy.get(signUpObject.selectBusinessCountry()).select('India');
-        cy.get(signUpObject.countryCode()).type('+91');
-        cy.get(signUpObject.getPhoneNumberSelector()).type('8888888888');
+        cy.get(signUpObject.selectBusinessCountry()).click({force:true});
+        cy.get(signUpObject.searchcountry()).type('Nigeria');
+        cy.get(signUpObject.selectcountry()).click();   
         cy.get(signUpObject.getPasswordSelector()).type('Test@1234');
-        cy.get(signUpObject.getConfirmPasswordSelector()).type('Test@1234');
-        cy.get(signUpObject.button()).contains('Register').click();
-        cy.get(signUpObject.getWelcomeSelector(), { timeout: 25000 }).should('include.text', 'Welcome to Eze!');
+        cy.get(signUpObject.saveandcontinuebtn()).contains('Save and Continue').click();
+        cy.get(signUpObject.getWelcomeSelector(),{ timeout: 25000 }).should('include.text','We sent you a link!');
     }
 
     signUpWithYahoo() {
-        cy.get(signUpObject.selectCountry()).click();
-        cy.get(signUpObject.selectCountryName()).click();
         cy.get(signUpObject.button()).contains('Create an Account').click();
-        cy.get(signUpObject.getFirstNameSelector()).type('Drob');
-        cy.get(signUpObject.getLastNameSelector()).type('Ypsm');
+        cy.get(signUpObject.FirstNameSelector()).eq(0).type('cypress',{force:true}); 
+        cy.get(signUpObject.getLastNameSelector()).eq(1).type('Test',{force:true});
         cy.get(signUpObject.getEmailSelector()).type(chance.email({ domain: "yahoo.com" }));
-        cy.get(signUpObject.companyNameSelector()).type(chance.string({ length: 5 }));
-        cy.get(signUpObject.selectBusinessCountry()).select('India');
-        cy.get(signUpObject.countryCode()).type('+91');
-        cy.get(signUpObject.getPhoneNumberSelector()).type('8888888888');
+        cy.get(signUpObject.selectBusinessCountry()).click({force:true});
+        cy.get(signUpObject.searchcountry()).type('Nigeria');
+        cy.get(signUpObject.selectcountry()).click();   
         cy.get(signUpObject.getPasswordSelector()).type('Test@1234');
-        cy.get(signUpObject.getConfirmPasswordSelector()).type('Test@1234');
-        cy.get(signUpObject.button()).contains('Register').click();
-        cy.get(signUpObject.getWelcomeSelector(), { timeout: 25000 }).should('include.text', 'Welcome to Eze!');
+        cy.get(signUpObject.saveandcontinuebtn()).contains('Save and Continue').click();
+        cy.get(signUpObject.getWelcomeSelector(),{ timeout: 25000 }).should('include.text','We sent you a link!');
     }
 
     signUpWithOutlook() {
-        cy.get(signUpObject.selectCountry()).click();
-        cy.get(signUpObject.selectCountryName()).click();
         cy.get(signUpObject.button()).contains('Create an Account').click();
-        cy.get(signUpObject.getFirstNameSelector()).type('Drob');
-        cy.get(signUpObject.getLastNameSelector()).type('Ypsm');
+        cy.get(signUpObject.FirstNameSelector()).eq(0).type('cypress',{force:true}); 
+        cy.get(signUpObject.getLastNameSelector()).eq(1).type('Test',{force:true});
         cy.get(signUpObject.getEmailSelector()).type(chance.email({ domain: "outlook.com" }));
-        cy.get(signUpObject.companyNameSelector()).type(chance.string({ length: 5 }));
-        cy.get(signUpObject.selectBusinessCountry()).select('India');
-        cy.get(signUpObject.countryCode()).type('+91');
-        cy.get(signUpObject.getPhoneNumberSelector()).type('8888888888');
+        cy.get(signUpObject.selectBusinessCountry()).click({force:true});
+        cy.get(signUpObject.searchcountry()).type('Nigeria');
+        cy.get(signUpObject.selectcountry()).click();   
         cy.get(signUpObject.getPasswordSelector()).type('Test@1234');
-        cy.get(signUpObject.getConfirmPasswordSelector()).type('Test@1234');
-        cy.get(signUpObject.button()).contains('Register').click();
-        cy.get(signUpObject.getWelcomeSelector(), { timeout: 25000 }).should('include.text', 'Welcome to Eze!');
+        cy.get(signUpObject.saveandcontinuebtn()).contains('Save and Continue').click();
+        cy.get(signUpObject.getWelcomeSelector(),{ timeout: 25000 }).should('include.text','We sent you a link!');
     }
 
     signUpWithHotmail() {
-        cy.get(signUpObject.selectCountry()).click();
-        cy.get(signUpObject.selectCountryName()).click();
         cy.get(signUpObject.button()).contains('Create an Account').click();
-        cy.get(signUpObject.getFirstNameSelector()).type('Drob');
-        cy.get(signUpObject.getLastNameSelector()).type('Ypsm');
+        cy.get(signUpObject.FirstNameSelector()).eq(0).type('cypress',{force:true}); 
+        cy.get(signUpObject.getLastNameSelector()).eq(1).type('Test',{force:true});
         cy.get(signUpObject.getEmailSelector()).type(chance.email({ domain: "hotmail.com" }));
-        cy.get(signUpObject.companyNameSelector()).type(chance.string({ length: 5 }));
-        cy.get(signUpObject.selectBusinessCountry()).select('India');
-        cy.get(signUpObject.countryCode()).type('+91');
-        cy.get(signUpObject.getPhoneNumberSelector()).type('8888888888');
+        cy.get(signUpObject.selectBusinessCountry()).click({force:true});
+        cy.get(signUpObject.searchcountry()).type('Nigeria');
+        cy.get(signUpObject.selectcountry()).click();   
         cy.get(signUpObject.getPasswordSelector()).type('Test@1234');
-        cy.get(signUpObject.getConfirmPasswordSelector()).type('Test@1234');
-        cy.get(signUpObject.button()).contains('Register').click();
-        cy.get(signUpObject.getWelcomeSelector(), { timeout: 25000 }).should('include.text', 'Welcome to Eze!');
+        cy.get(signUpObject.saveandcontinuebtn()).contains('Save and Continue').click();
+        cy.get(signUpObject.getWelcomeSelector(),{ timeout: 25000 }).should('include.text','We sent you a link!');
     }
 
     signUpWithZoho() {
-        cy.get(signUpObject.selectCountry()).click();
-        cy.get(signUpObject.selectCountryName()).click();
         cy.get(signUpObject.button()).contains('Create an Account').click();
-        cy.get(signUpObject.getFirstNameSelector()).type('Drob');
-        cy.get(signUpObject.getLastNameSelector()).type('Ypsm');
+        cy.get(signUpObject.FirstNameSelector()).eq(0).type('cypress',{force:true}); 
+        cy.get(signUpObject.getLastNameSelector()).eq(1).type('Test',{force:true});
         cy.get(signUpObject.getEmailSelector()).type(chance.email({ domain: "zoho.com" }));
-        cy.get(signUpObject.companyNameSelector()).type(chance.string({ length: 5 }));
-        cy.get(signUpObject.selectBusinessCountry()).select('India');
-        cy.get(signUpObject.countryCode()).type('+91');
-        cy.get(signUpObject.getPhoneNumberSelector()).type('8888888888');
+        cy.get(signUpObject.selectBusinessCountry()).click({force:true});
+        cy.get(signUpObject.searchcountry()).type('Nigeria');
+        cy.get(signUpObject.selectcountry()).click();   
         cy.get(signUpObject.getPasswordSelector()).type('Test@1234');
-        cy.get(signUpObject.getConfirmPasswordSelector()).type('Test@1234');
-        cy.get(signUpObject.button()).contains('Register').click();
-        cy.get(signUpObject.getWelcomeSelector(), { timeout: 25000 }).should('include.text', 'Welcome to Eze!');
+        cy.get(signUpObject.saveandcontinuebtn()).contains('Save and Continue').click();
+        cy.get(signUpObject.getWelcomeSelector(),{ timeout: 25000 }).should('include.text','We sent you a link!');
     }
 
     signUpWithCompany() {
-        cy.get(signUpObject.selectCountry()).click();
-        cy.get(signUpObject.selectCountryName()).click();
         cy.get(signUpObject.button()).contains('Create an Account').click();
-        cy.get(signUpObject.getFirstNameSelector()).type('Drob');
-        cy.get(signUpObject.getLastNameSelector()).type('Ypsm');
+        cy.get(signUpObject.FirstNameSelector()).eq(0).type('cypress',{force:true}); 
+        cy.get(signUpObject.getLastNameSelector()).eq(1).type('Test',{force:true});
         cy.get(signUpObject.getEmailSelector()).type(chance.email({ domain: "testershub.co.in" }));
-        cy.get(signUpObject.companyNameSelector()).type(chance.string({ length: 5 }));
-        cy.get(signUpObject.selectBusinessCountry()).select('India');
-        cy.get(signUpObject.countryCode()).type('+91');
-        cy.get(signUpObject.getPhoneNumberSelector()).type('8888888888');
+        cy.get(signUpObject.selectBusinessCountry()).click({force:true});
+        cy.get(signUpObject.searchcountry()).type('Nigeria');
+        cy.get(signUpObject.selectcountry()).click();   
         cy.get(signUpObject.getPasswordSelector()).type('Test@1234');
-        cy.get(signUpObject.getConfirmPasswordSelector()).type('Test@1234');
-        cy.get(signUpObject.button()).contains('Register').click();
-        cy.get(signUpObject.getWelcomeSelector(), { timeout: 25000 }).should('include.text', 'Welcome to Eze!');
+        cy.get(signUpObject.saveandcontinuebtn()).contains('Save and Continue').click();
+        cy.get(signUpObject.getWelcomeSelector(),{ timeout: 25000 }).should('include.text','We sent you a link!');
     }
 }
 
